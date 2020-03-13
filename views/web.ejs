@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Khách Hàng</title>
+        <style>
+            #wrapper{width: 600px; margin: auto;padding: 10px}
+        </style>
+          <script src="jquery-3.4.1.min.js">
+        </script>
+        <script src="/socket.io/socket.io.js">
+    
+        </script>
+        <script>
+             var socket = io("http://localhost:3000");
+             socket.on("server_send_quangcao",function(data){
+                
+                var s="<a href='"+data.link+"'><img src='Ads/"+data.hinh+"' width=200></a>";
+                $("#quangcao").html(s);
+
+                });
+
+
+            $(document).ready(function(){
+               
+               
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+        <div id="quangcao"></div>
+        <div id="content">Một buổi sáng đẹp trời Thỏ đang nhởn nhơ đuổi bướm hái hoa thì gặp một anh Rùa đang chậm chạp từ xa đi lại. Thấy Rùa, Thỏ liền chê:
+
+            –         Sao anh lớn xác mà chậm chạp như thế! Ở đời những người chậm chạp thì làm ăn được gì?
+            
+            Thấy vẻ mặt đương dương tự đắc của Thỏ, Rùa từ tốn trả lời:
+            
+            –         Tôi tuy chậm chạp nhưng chạy đường dài anh chưa chắc thắng nổi tôi đâu! Nghe Rùa nói vậy Thỏ cười ngạo mạn:
+            
+            –         Vậy thì tôi với anh chạy thi nhé!
+            
+            Rùa đồng ý chấp nhận lời thách đấu của Thỏ. Sáng sớm hôm sau, dưới sự giám sát của tổ trọng tài gồm: Nhím, Sóc và chim Họa Mi cùng đông đảo cổ động viên là các chim thú trong rừng, cuộc đua diễn ra thật hào hứng. Lúc đầu Thỏ chỉ co giò nhảy mấy bước là đã bỏ xa Rùa một khỏang khá xa. Trong khi đó Rùa không nản nó vẫn chậm chạp cố gắng. Khi Thỏ quay đầu lại nó không thấy Rùa đâu nó nghĩ nó phải chứng tỏ cho mọi người thấy rằng nó có thể chấp Rùa 2 lần đường mà vẫn có thể thắng Rùa một cách dễ dàng. Thế là nó ung dung dừng lại gặm cỏ hái hoa, nó còn ga-lăng tung những bó hoa tươi thắm cho các nàng sóc nâu, chia các hạt dẻ cho mấy nhóc tỳ họ nhà nhím…Thế rồi mặt trời đã lên cao Thỏ sực nhớ đến cuộc đua và bắt đầu co gìo chạy. Nó chạy nhanh như lướt gió. Ôi kia rồi đích đang hiện ra. Mọi người đang reo hò cổ vũ. Nó tưởng rằng mọi người đang cổ vũ cho chiến thắng của nó. Nhưng không! Rùa đã về đích trước nó trong gang tấc.
+            
+            Thế là nó đành xếp hạng nhì trong cuộc đua chỉ có hai người. Ôi thật là xấu hổ, Thỏ mà lại thua Rùa! Nhưng tiếng cười nhạo báng làm Thỏ bầm gan tím ruột. Nhưng biết làm sao được!, đấy là bài học cho kẻ ỷ tài mà chủ quan coi thường người khác.
+            
+            Một hôm khác Thỏ lại gặp Rùa, vẫn còn cay cú với thất bại ê chề lần trước Thỏ nói với Rùa:
+            
+            –         Hôm trước anh thắng tôi chẳng qua là tôi mải chơi, để công bằng ngày mai tôi và anh hãy thi đấu lại. Rùa vui vẻ nhận lời.
+            
+            Nghe nói Rùa lại chấp nhận thi đấu lại với Thỏ, nhiều bạn bè của rùa can ngăn:
+            
+            –         Lần trước anh thắng là do Thỏ nó chủ quan lần này anh làm sao thắng nổi nó, anh đấu với nó là anh sẽ thua!. Rùa im lặng không nói chỉ mỉm cười.
+            
+            Lần này do Thỏ chú ý chạy ngay từ đầu vì vậy kết qủa chiến thắng thuộc về Thỏ là đương nhiên. Phóng viên Ếch Ộp bèn phỏng vấn Rùa:</div>
+        </div>
+    </body>
+</html>

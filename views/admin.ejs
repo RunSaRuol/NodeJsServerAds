@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Admin Page</title>
+    </head>
+    <script src="jquery-3.4.1.min.js">
+    </script>
+    <script src="/socket.io/socket.io.js">
+
+    </script>
+    <script>
+         var socket = io("http://localhost:3000");
+
+
+
+        $(document).ready(function(){
+            $("#dsqc").change(function(){
+                var v  = $(this).val();
+                $("#hinhQC").attr("src","Ads/"+v);
+            });
+            $("#btnGui").click(function(){
+                var t =$("#dsqc").val();
+                socket.emit("admin_send_message",t);
+
+            });
+        });
+    </script>
+    <body>
+        <select id="dsqc">
+            <option value="">---Chọn Quảng Cáo---</option>
+            <% 
+            var t=0;
+            mangQC.forEach(function(qc){ %>
+                <option value="<%=qc.Hinh%>"><%=qc.Hinh%></option>
+            <%
+            t++; 
+        
+        }); %>
+        </select>
+        <input type="button" id="btnGui" value="Send Ads" />
+        <div>
+            <img id="hinhQC" src="" width="400"/>
+        </div>
+    </body>
+</html>
